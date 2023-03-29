@@ -1,17 +1,21 @@
 <template>
-  <div id="app">
+  <!-- <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  </div> -->
+<StoreGen />
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import StoreGen from './components/StoreGen.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   
+    StoreGen
   }
 }
 </script>
