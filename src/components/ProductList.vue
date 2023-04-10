@@ -9,17 +9,17 @@
           </h4>
           <div class="card-text bg-white p-1">{{ p.description }}</div>
       </div>
-      <page-controls />
+     <!-- <page-controls /> -->
   </div>
 </template>
 
 <script>
 
 import { mapGetters} from "vuex";
-import PageControls from "..componets/PageControls.vue";
+//import PageControls from "..componets/PageControls.vue";
 
 export default {
-  components: { PageControls },
+  components: { //PageControls },
   computed: {
       ...mapGetters({ products: "processedProducts" })
   },
