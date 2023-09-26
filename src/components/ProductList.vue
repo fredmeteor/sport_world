@@ -9,19 +9,19 @@
           </h4>
           <div class="card-text bg-white p-1">{{ p.description }}</div>
       </div>
-     <!-- <page-controls /> -->
+   
   </div>
 </template>
 
 <script>
 
-import { mapGetters} from "vuex";
-//import PageControls from "..componets/PageControls.vue";
+import { mapState} from "vuex";
+
 
 export default {
-  components: { //PageControls },
+  components: {  },
   computed: {
-      ...mapGetters({ products: "processedProducts" })
+      ...mapState( ["products" ] )
   },
   filters: {
       currency(value) {
