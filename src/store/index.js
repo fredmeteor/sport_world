@@ -33,12 +33,12 @@ export default new Vuex.Store({
       productsFilteredByCategory: state => state.products
           .filter(p => state.currentCategory == "All" 
               || p.category == state.currentCategory),
-      processedProducts: (state, getters) => {
+      processedProducts: (state, getters )=> {
           let index = (state.currentPage - 1) * state.pageSize;
           return getters.productsFilteredByCategory.slice(index, 
               index + state.pageSize);
       },
-      pageCount: (state, getters) =>
+     pageCount: (state ,getters) =>
           Math.ceil(getters.productsFilteredByCategory.length / state.pageSize),
       categories: state => ["All", ...state.categoriesData]
   },
@@ -66,7 +66,7 @@ export default new Vuex.Store({
        
       async getData(context) {
 
-        'debugger';
+        
        
           let pdata = (await Axios.get(productsUrl)).data;
 

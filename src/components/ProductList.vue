@@ -15,13 +15,14 @@
 
 <script>
 
-import { mapState} from "vuex";
+import { mapGetters} from "vuex";
 import PageControls from "./PageControls";
 
 export default {
   components: { PageControls },
   computed: {
-      ...mapState( ["products" ] )
+      
+      ...mapGetters({ products: "processedProducts" })
   },
   filters: {
       currency(value) {
