@@ -9,24 +9,24 @@
           </h4>
           <div class="card-text bg-white p-1">{{ p.description }}</div>
       </div>
-   
+      <PageControls />
   </div>
 </template>
 
 <script>
 
 import { mapState} from "vuex";
-
+import PageControls from "./PageControls";
 
 export default {
-  components: {  },
+  components: { PageControls },
   computed: {
       ...mapState( ["products" ] )
   },
   filters: {
       currency(value) {
           return new Intl.NumberFormat("en-US",
-              { style: "currency", currency: "USD" }).format(value);
+              { style: "currency", currency: "GBP" }).format(value);
       }
   }
 }
