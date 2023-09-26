@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col bg-dark text-white">
                 <a class="navbar-brand">SPORTS STORE</a>
+                <cart-summary />
             </div>
         </div>
         <div class="row">
@@ -31,7 +32,7 @@
                     <tr>
                         <td colspan="3" class="text-right">Total:</td>
                         <td class="text-right">
-                            {{ totalPrice | currency }}
+                            {{ totalPrice  }}
                         </td>
                     </tr>
                 </tfoot>
@@ -58,9 +59,9 @@
 
 import { mapState, mapMutations, mapGetters } from "vuex";
 import CartLine from "./ShoppingCartLine";
-
+import CartSummary from "./CartSummary.vue";
 export default {
-    components: { CartLine },
+    components: { CartLine, CartSummary},
     computed: {
         ...mapState({ lines: state => state.cart.lines }),
         ...mapGetters({  totalPrice : "cart/totalPrice"  })

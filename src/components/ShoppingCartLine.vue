@@ -8,10 +8,10 @@
         </td>
         <td>{{ line.product.name }}</td>
         <td class="text-right">
-            {{ line.product.price | currency }}
+            {{ line.product.price }}  
         </td>
         <td class="text-right">
-            {{ (line.quantity * line.product.price) | currency }}
+            {{ (line.quantity * line.product.price) }}
         </td>
         <td class="text-center">
             <button class="btn btn-sm btn-danger"
