@@ -40,7 +40,7 @@ export default new Vuex.Store({
       },
      pageCount: (state ,getters) =>
           Math.ceil(getters.productsFilteredByCategory.length / state.pageSize),
-      categories: state => ["All", ...state.categoriesData]
+      categories: state => ["All", ...new Set(state.products.map(p => p.category).sort())]
   },
   mutations: {
     

@@ -7,10 +7,12 @@
     </div>
     <div class="row">
       <div class="col-3 bg-info p-2">
+        <h1><span>Categories</span></h1> 
         <category-controls />
       </div>
-    
+   
       <div class="col-9 p-2">
+        <h1><span>Products</span></h1> 
         <ProductList />
       </div>
     </div>
