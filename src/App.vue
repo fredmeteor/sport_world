@@ -1,18 +1,18 @@
 <template>
-<StoreComponent />
+<router-view />
 
 </template>
 
 <script>
 
-import StoreComponent from './components/StoreComponent.vue';
+//import StoreComponent from './components/StoreComponent.vue';
 import { mapActions } from "vuex";
 
 export default {
   name: 'app',
   components: {
    
-   StoreComponent
+   //StoreComponent
   },methods:{
      
     ...mapActions(["getData"])
