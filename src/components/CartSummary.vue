@@ -3,7 +3,7 @@
         <small>
             Your cart:
             <span v-if="itemCount > 0">
-                {{ itemCount }} item(s) {{ totalPrice | currency }}
+                {{ itemCount }} item(s) {{ totalPrice | currency}}
             </span>
             <span v-else>
                 (empty)

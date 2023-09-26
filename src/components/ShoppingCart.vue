@@ -32,7 +32,7 @@
                     <tr>
                         <td colspan="3" class="text-right">Total:</td>
                         <td class="text-right">
-                            {{ totalPrice  }}
+                            {{ totalPrice | currency }}
                         </td>
                     </tr>
                 </tfoot>
