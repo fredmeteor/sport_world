@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import Axios from "axios";
-
+import CartModule from "./cart"
 Vue.use(Vuex);
 
 const baseUrl = "http://localhost:3500";
@@ -19,6 +19,7 @@ for (let i = 1; i <= 10; i++) {
 
 export default new Vuex.Store({
   strict: true,
+  modules: { cart: CartModule },
   state: {
       products: [],
       categoriesData: [],

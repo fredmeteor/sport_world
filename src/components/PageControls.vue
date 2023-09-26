@@ -2,6 +2,7 @@
     <div class="row mt-2">
         <div class="col form-group">
             <select class="form-control" v-on:change="changePageSize">
+               <option value="2">2 per page</option>
                 <option value="4">4 per page</option>
                 <option value="8">8 per page</option>
                 <option value="12">12 per page</option>
