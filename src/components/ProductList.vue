@@ -1,5 +1,6 @@
 <template>
   <div>
+  
       <div v-for="p in products" v-bind:key="p.id" class="card m-1 p-1 bg-light">
           <h4>
               {{p.name}}
@@ -7,17 +8,29 @@
                   {{ p.price | currency }}
               </span>
           </h4>
+
+        
           <div class="card-text bg-white p-1">{{ p.description }}
-            <button class="btn btn-success btn-sm float-right"
+        
+            <button class="btn btn-warning btn-sm float-right"
            v-on:click="handleProductAdd(p)">
                   Add To Cart
                   </button>
         </div>
          
       </div>
+     
+       
+   
+      
+
       <PageControls />
   </div>
 </template>
+
+
+
+
 
 <script>
 
