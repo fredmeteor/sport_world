@@ -1,4 +1,4 @@
-<!-- eslint-disable vue/multi-word-component-names -->
+
 <template>
     <div class="container-fluid">
         <div class="row">
@@ -15,7 +15,11 @@
                 <router-link to="/admin/orders"  class="btn btn-block btn-primary" 
                         active-class="active">
                     Orders
-                </router-link>                          
+                </router-link> 
+                 <router-link to="/admin/categories"  class="btn btn-block btn-primary" 
+                        active-class="active">
+                    Categories
+                </router-link>                             
             </div>
             <div class="col-9 p-2">
                 <router-view />

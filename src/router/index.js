@@ -9,6 +9,7 @@ import Admin from "../components/admin/Admin";
 import ProductAdmin from "../components/admin/ProductAdmin";
 import OrderAdmin from "../components/admin/OrderAdmin";
 import ProductEditor from "../components/admin/ProductEditor";
+import CategoryAdmin from "../components/admin/CategoryAdmin";
 //import dataStore from "../store";
 
 Vue.use(VueRouter);
@@ -34,7 +35,9 @@ export default new VueRouter({
                       component: ProductEditor },
                 { path: "products", component: ProductAdmin },
                 { path: "orders", component: OrderAdmin },
+                { path: "categories", component: CategoryAdmin },
                 { path: "", redirect: "/admin/products"}
+
             ]
         },
         { path: "*", redirect: "/"}
