@@ -69,6 +69,10 @@ export default new Vuex.Store({
             state.searchTerm = term;
             state.currentPage = 1;
         },
+        _addProduct(state, product){
+
+            state.pages[state.currentPage].unshift(product);
+        }
     },
     actions: { 
         async getData(context) {
