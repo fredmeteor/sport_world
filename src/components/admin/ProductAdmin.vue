@@ -48,3 +48,9 @@ export default {
 }
 
 </script>
+
+<style scoped>
+
+tbody > tr:nth-child(even) { background-color: coral; }
+tbody > tr:nth-child(odd) { background-color: lightblue; }
+</style>
