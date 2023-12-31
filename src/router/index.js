@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter  from "vue-router";
 import StoreComponent from "../components/StoreComponent";
 import ShoppingCart from "../components/ShoppingCart";
-import Checkout from "../components/Checkout";
+import CheckOut from "../components/CheckOut";
 import OrderThanks from "../components/OrderThanks";
 import Authentication from "../components/admin/Authentication";
 import Admin from "../components/admin/Admin";
@@ -18,7 +18,7 @@ export default new VueRouter({
     routes: [
         { path: "/", component: StoreComponent },
         { path: "/cart", component: ShoppingCart },
-        { path: "/checkout", component: Checkout}, 
+        { path: "/checkOut", component: CheckOut}, 
         { path: "/thanks/:id", component: OrderThanks},
         { path: "/login", component: Authentication },
         { path: "/admin", component: Admin,
