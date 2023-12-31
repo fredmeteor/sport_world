@@ -69,9 +69,15 @@ export default new Vuex.Store({
             state.searchTerm = term;
             state.currentPage = 1;
         },
-        _addProduct(state, product){
+        addProduct(state, product){
 
             state.pages[state.currentPage].unshift(product);
+        },
+        updateProduct(state, product){
+           let page = state.pages[state.currentPage];
+           let index = page.findIndex(p => p.id == product.id);
+           Vue.set(page, index, product);
+
         }
     },
     actions: { 
