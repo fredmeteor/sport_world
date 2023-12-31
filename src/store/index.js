@@ -3,7 +3,7 @@ import Vuex from "vuex";
 import Axios from "axios";
 import CartModule from "./cart";
 import OrdersModule from "./orders";
-import AuthModule from "./auth";
+//import AuthModule from "./auth";
 
 Vue.use(Vuex);
 
@@ -13,7 +13,7 @@ const categoriesUrl = `${baseUrl}/categories`;
 
 export default new Vuex.Store({
     strict: true,
-    modules:  { cart: CartModule, orders: OrdersModule, auth: AuthModule },        
+    modules:  { cart: CartModule, orders: OrdersModule },        
     state: {
         categoriesData: [],
         currentPage: 1,
@@ -29,7 +29,10 @@ export default new Vuex.Store({
             return state.pages[state.currentPage];
         },
         pageCount: (state) => state.serverPageCount,
-        categories: state => ["All", ...state.categoriesData]
+        categories: state => ["All", ...state.categoriesData],
+        productById:(state) => (id) => {
+            return state.pages[state.currentPage].find(p => p.id == id);
+        }
     },
     mutations: {
         _setCurrentPage(state, page) {
