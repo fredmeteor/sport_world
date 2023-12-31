@@ -5,8 +5,11 @@
         </router-link>
         <table class="table table-sm table-bordered">
             <thead>
-                <th>ID</th><th>Name</th><th>Category</th>
-                <th class="text-right">Price</th><th></th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th class="text-right">Price</th>
+                <th class="text-center">Action</th>
             </thead>
             <tbody>
                 <tr v-for="p in products" v-bind:key="p.id">
