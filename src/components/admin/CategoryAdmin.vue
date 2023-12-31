@@ -11,28 +11,27 @@
             </thead>
             <tbody>
                 <tr v-for="p in products" v-bind:key="p.id">
-                    <td>{{ id }}</td>
+                    <td>{{ p.id }}</td>
                    
-                    <td>{{ category }}</td>
+                    <td>{{ p.category }}</td>
                 
                    
                 </tr>
             </tbody>
         </table>
-       // <page-controls />
     </div>
 </template>
 
 <script>
 
-//import PageControls from "../PageControls";
+
 import { mapGetters, mapActions } from "vuex";
 
 export default {
     components: { },
     computed: {
         ...mapGetters({
-                products: "productById"
+                products: "processedProduct"
             })
     },
     methods: {

@@ -54,6 +54,7 @@ export default {
 
 <style scoped>
 
-tbody > tr:nth-child(even) { background-color: coral; }
-tbody > tr:nth-child(odd) { background-color: lightblue; }
+tbody > tr:nth-child(even) { background-color: coral; text-color: yellow; }
+tbody > tr:nth-child(odd) { background-color: lightblue;font-weight: bold; }
+
 </style>
