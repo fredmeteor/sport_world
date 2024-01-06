@@ -27,3 +27,21 @@
         </div>
     </div>
 </template>
+
+
+
+<style>
+
+btn btn-block btn-primary{
+background: #ffc600;
+  border: 0;
+  padding: 10px 20px;
+    
+
+}
+
+</style>
+
+
+
+
